@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C1BFB5;
+}
+
+.container {
+    position: relative;
+    margin-top: 4%;
+}
+
+.container .product {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: rgb(230, 228, 228);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.container .product::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: orange;
+    clip-path: circle(140px at 80% 20%);
+}
+
+.container.product .image-box {
+    position: absolute;
+    top: 10%;
+    transform: translateY(-110%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+}
+
+.container .product .image-box img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 270px;
+}
+
+.container .product .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 210px;
+    text-align: center;
+}
+
+.container .product .content h2 {
+    position: relative;
+    font-weight: 650;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.container .product .content .color,
+.container .product .content .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.container .product .content .size h3,
+.container .product .content .color h3 {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.container .product .content .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: whitesmoke;
+    background: black;
+    margin: 0 5px;
+    border-radius: 6px;
+}
+
+.container .product .content .color span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 80px;
+}
+
+.container .product .content button {
+    margin-top: 20px;
+    border-radius: 32px;
+    border: none;
+    padding: 14px 16px;
+    color: black;
+    background: orange;
+    font-weight: bold;
+}
